@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog</title>
+<%= stylesheet_link_tag    "application" %>
+<%= javascript_include_tag "vendor/modernizr" %>
+<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+<style>
+.centered {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 800px;
+    height:200px;
+}
+.left_bot {
+    position:absolute;
+    top:95%;
+    width: 200px;
+    height: 0px;
+}
+</style>
+</head>
+<body>
+  <%= render 'shared/navbar' %>
+
+  <div class="centered">
+    <div class="row">
+        	<div class="well bs-component">
+  				<%= yield %>
+  			</div>
+  	</div>
+	</div>
+  <footer>
+    <div class="left_bot">
+      <p>&reg; Gimranov Ainur</p>
+    </div>
+  </footer>
+</body>
+</html>
